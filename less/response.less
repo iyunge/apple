@@ -1,0 +1,100 @@
+//调用变量
+@import "var";
+//有边距
+.container{
+  padding-left: @padding!important;
+  padding-right: @padding!important;
+  display: block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+.padding{
+  padding-right: @padding!important;
+  padding-left: @padding!important;
+}
+//无边距
+.containr-fluid{
+  padding-left:@padding!important;
+  padding-right:@padding!important;
+  display:block;
+}
+.row{
+  margin-left: -@padding!important;
+  margin-right: -@padding!important;
+  display: block;
+  height: auto;
+  &:after{
+    content:"";
+    display:block;
+    clear:both;
+    height: 0;
+    line-height: 0;
+  }
+}
+//列
+[class*=col-]{
+  display: block;
+  float: left;
+  .padding;
+}
+.col(@type,@i:1) when (@i<=@col){
+  .col-@{type}-@{i} {
+    width: 100% / @col * @i
+  }
+  .col(@type,@i+1);
+}
+.col(xs);
+
+.grid(@type,@screenWidth){
+  @media screen and (min-width: @screenWidth) {
+    .col(@type);
+    .container{
+      width: @screenWidth - @padding*2;
+    }
+  }
+}
+.grid(sm,@smScreen);
+.grid(dm,@dmScreen);
+.grid(bm,@bmScreen);
+
+
+//超出隐藏
+@media screen and (max-width:@smScreen){
+  .hidden-xs{
+    display:none!important;
+  }
+}
+@media screen and (min-width: @smScreen) and (max-width: @dmScreen){
+  .hidden-sm{
+    display:none!important;
+  }
+}
+@media screen and (min-width: @dmScreen) and (max-width: @bmScreen){
+  .hidden-dm{
+    display:none!important;
+  }
+}
+@media screen and (min-width: @bmScreen){
+  .hidden-bm{
+    display:none!important;
+  }
+}
+.center(){
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 图片响应 */
+[img-response]{
+  display: block;
+  max-width: 100%;
+}
+/* 盒子居中 */
+[block-center]{
+  display: block;
+  .center;
+}
+/* 文字居中 */
+[text-center]{
+  text-align: center;
+}

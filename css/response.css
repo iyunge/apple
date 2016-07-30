@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  display: block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+.padding {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+.containr-fluid {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  display: block;
+}
+.row {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+  display: block;
+  height: auto;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+[class*=col-] {
+  display: block;
+  float: left;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+.col-xs-1 {
+  width: 5%;
+}
+.col-xs-2 {
+  width: 10%;
+}
+.col-xs-3 {
+  width: 15%;
+}
+.col-xs-4 {
+  width: 20%;
+}
+.col-xs-5 {
+  width: 25%;
+}
+.col-xs-6 {
+  width: 30%;
+}
+.col-xs-7 {
+  width: 35%;
+}
+.col-xs-8 {
+  width: 40%;
+}
+.col-xs-9 {
+  width: 45%;
+}
+.col-xs-10 {
+  width: 50%;
+}
+.col-xs-11 {
+  width: 55%;
+}
+.col-xs-12 {
+  width: 60%;
+}
+.col-xs-13 {
+  width: 65%;
+}
+.col-xs-14 {
+  width: 70%;
+}
+.col-xs-15 {
+  width: 75%;
+}
+.col-xs-16 {
+  width: 80%;
+}
+.col-xs-17 {
+  width: 85%;
+}
+.col-xs-18 {
+  width: 90%;
+}
+.col-xs-19 {
+  width: 95%;
+}
+.col-xs-20 {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .col-sm-1 {
+    width: 5%;
+  }
+  .col-sm-2 {
+    width: 10%;
+  }
+  .col-sm-3 {
+    width: 15%;
+  }
+  .col-sm-4 {
+    width: 20%;
+  }
+  .col-sm-5 {
+    width: 25%;
+  }
+  .col-sm-6 {
+    width: 30%;
+  }
+  .col-sm-7 {
+    width: 35%;
+  }
+  .col-sm-8 {
+    width: 40%;
+  }
+  .col-sm-9 {
+    width: 45%;
+  }
+  .col-sm-10 {
+    width: 50%;
+  }
+  .col-sm-11 {
+    width: 55%;
+  }
+  .col-sm-12 {
+    width: 60%;
+  }
+  .col-sm-13 {
+    width: 65%;
+  }
+  .col-sm-14 {
+    width: 70%;
+  }
+  .col-sm-15 {
+    width: 75%;
+  }
+  .col-sm-16 {
+    width: 80%;
+  }
+  .col-sm-17 {
+    width: 85%;
+  }
+  .col-sm-18 {
+    width: 90%;
+  }
+  .col-sm-19 {
+    width: 95%;
+  }
+  .col-sm-20 {
+    width: 100%;
+  }
+  .container {
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .col-dm-1 {
+    width: 5%;
+  }
+  .col-dm-2 {
+    width: 10%;
+  }
+  .col-dm-3 {
+    width: 15%;
+  }
+  .col-dm-4 {
+    width: 20%;
+  }
+  .col-dm-5 {
+    width: 25%;
+  }
+  .col-dm-6 {
+    width: 30%;
+  }
+  .col-dm-7 {
+    width: 35%;
+  }
+  .col-dm-8 {
+    width: 40%;
+  }
+  .col-dm-9 {
+    width: 45%;
+  }
+  .col-dm-10 {
+    width: 50%;
+  }
+  .col-dm-11 {
+    width: 55%;
+  }
+  .col-dm-12 {
+    width: 60%;
+  }
+  .col-dm-13 {
+    width: 65%;
+  }
+  .col-dm-14 {
+    width: 70%;
+  }
+  .col-dm-15 {
+    width: 75%;
+  }
+  .col-dm-16 {
+    width: 80%;
+  }
+  .col-dm-17 {
+    width: 85%;
+  }
+  .col-dm-18 {
+    width: 90%;
+  }
+  .col-dm-19 {
+    width: 95%;
+  }
+  .col-dm-20 {
+    width: 100%;
+  }
+  .container {
+    width: 994px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-bm-1 {
+    width: 5%;
+  }
+  .col-bm-2 {
+    width: 10%;
+  }
+  .col-bm-3 {
+    width: 15%;
+  }
+  .col-bm-4 {
+    width: 20%;
+  }
+  .col-bm-5 {
+    width: 25%;
+  }
+  .col-bm-6 {
+    width: 30%;
+  }
+  .col-bm-7 {
+    width: 35%;
+  }
+  .col-bm-8 {
+    width: 40%;
+  }
+  .col-bm-9 {
+    width: 45%;
+  }
+  .col-bm-10 {
+    width: 50%;
+  }
+  .col-bm-11 {
+    width: 55%;
+  }
+  .col-bm-12 {
+    width: 60%;
+  }
+  .col-bm-13 {
+    width: 65%;
+  }
+  .col-bm-14 {
+    width: 70%;
+  }
+  .col-bm-15 {
+    width: 75%;
+  }
+  .col-bm-16 {
+    width: 80%;
+  }
+  .col-bm-17 {
+    width: 85%;
+  }
+  .col-bm-18 {
+    width: 90%;
+  }
+  .col-bm-19 {
+    width: 95%;
+  }
+  .col-bm-20 {
+    width: 100%;
+  }
+  .container {
+    width: 1170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hidden-xs {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hidden-sm {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .hidden-dm {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hidden-bm {
+    display: none!important;
+  }
+}
+/* 图片响应 */
+[img-response] {
+  display: block;
+  max-width: 100%;
+}
+/* 盒子居中 */
+[block-center] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 文字居中 */
+[text-center] {
+  text-align: center;
+}

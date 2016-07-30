@@ -1,0 +1,361 @@
+body,ul,li,a,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  font-family:'HanHei SC', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+  font-size: 16px;
+}
+a,li{
+  list-style: none;
+  text-decoration:none;
+  out-line: none;
+}
+.auto{
+  margin: 0 auto;
+}
+.nav{
+  width: 100%;
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position:absolute;
+  z-index: 1000;
+}
+ /*大屏幕导航*/
+.nav-big{
+  height: 44px;
+  max-width: 1024px;
+  .auto();
+  text-align: justify;
+  line-height: 44px;
+}
+.nav-big:after {
+  content: "";
+  display: inline-block;
+  line-height: 0;
+  clear: both;
+  height: 0;
+  width: 100%;
+}
+.nav-big li{
+  display: inline-block;
+  height:100%;
+}
+.nav-big li a{
+  display:block;
+  height:100%;
+  color:#fff;
+  transition: all 0.5s;
+}
+.nav-big li a:hover{
+  color:#88A1AD;
+}
+.nav-big .iconfont{
+  font-size: 20px!important;
+}
+/*大屏幕导航结束*/
+
+
+/*小屏幕导航*/
+.nav-min{
+  box-sizing: border-box;
+  max-width: 768px;
+  .auto();
+  height: 48px;
+  line-height:48px;
+  display: none;
+}
+.nav-min .min-head{
+  height: 100%;
+  width:100%;
+  text-align: justify;
+  &:after {
+    content: "";
+    display: inline-block;
+    line-height: 0;
+    clear: both;
+    height: 0;
+    width: 100%;
+  }
+}
+.nav-min .min-head div{
+  display: inline-block;
+  vertical-align: middle;
+
+}
+.nav-min .btn{
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+.nav-min .min-head div a{
+  display: block;
+  width:100%;
+  height: 48px;
+  padding: 0 15px;
+}
+
+.nav-min  .min-head div a .iconfont{
+  color:#fff;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.nav-min .min-head div a:hover .iconfont{
+   color: #C1C1BF;
+ }
+.nav-min .btn:hover span{
+  border-color: #C1C1BF;
+}
+.nav-min #active.btn span:nth-child(1){
+  animation:zuoxuan 0.5s 1 linear both;
+}
+.nav-min #active.btn span:nth-child(2){
+  animation:youxuan 0.5s 1 linear both;
+}
+.nav-min .btn span{
+  width:100%;
+  height: 0;
+  border-top:1px solid #fff;
+  display: block;
+  margin-top: 8px;
+  transition:all 0.5s;
+}
+.nav-min .list{
+  background: #000000;
+  overflow: hidden;
+  height: 0;
+  transtion:all 0.5s;
+}
+
+//小导航下拉动画
+.nav-min .list#anm{
+   animation:height 0.5s 1 linear both;
+ }
+@keyframes height {
+  100%{
+    height: 573px;
+    width: 100%;
+  }
+}
+.nav-min .list li{
+  height:48px;
+  margin: 0 48px;
+  border-bottom: 1px solid #333333;
+  a{
+    color: #fff;
+    transition:all 0.5s;
+  }
+  a:hover{
+    color: #535353;
+  }
+  i{
+    font-size: 25px;
+    margin-right: 10px;
+  }
+}
+.nav-min .list li:nth-last-child(1){
+  color: white;
+  border-color: white;
+}
+
+/*响应式*/
+@media screen and (min-width: 768px){
+  .nav-big{
+    display: block;
+  }
+  .nav-min{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .nav-min{
+    display: block;
+  }
+  .nav-big{
+    display: none;
+  }
+}
+/*btn的动画叉*/
+@keyframes zuoxuan {
+  100%{
+    transform: translateY(6px) translateX(1px) rotate(45deg);
+  }
+}
+@keyframes youxuan {
+  100%{
+    transform: translateY(-4px) translateX(1px) rotate(135deg);
+  }
+}
+/*banner*/
+.banner{
+  width: 100%;
+  position: relative;
+}
+.swiper-wrapper{
+  height: 100%!important;
+  .swiper-slide{
+    width: 100%!important;
+    position: relative!important;
+    overflow: hidden;
+    img{
+      position: absolute!important;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    span{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 15%;
+      font-size:48px;
+      font-weight: 100;
+      img{
+
+      }
+    }
+    p{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20%;
+      font-size: 24px;
+      font-family:"Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;;
+      font-weight: 100;
+      color: #666;
+      text-align: center;
+    }
+  }
+}
+.swiper-container{
+  height: 100%;
+}
+@media screen and (min-width:760px) {
+  .banner{
+    height: 660px;
+    img{
+      top: 40%;
+    }
+  }
+}
+
+@media screen and (max-width:760px) {
+  .banner{
+    height: 320px;
+    img{
+      width: 80%;
+      top: 55%;
+    }
+    .watch img{
+      top:45%;
+      width:50%
+    }
+    .swiper-slide span{
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20%;
+      font-weight: 100;
+      img{
+        width:150px;
+      }
+    }
+    .swiper-slide p{
+      top: 22%;
+      text-align: center;
+      width: 110%;
+      font-size: 24px;
+    }
+  }
+}
+.swiper-pagination{
+  position: absolute;
+  bottom: 10px!important;
+}
+/*栅格  产品系列*/
+.set{
+  border-bottom: 2px solid #fff;
+  overflow: hidden;
+}
+.set .hot .zz{
+  height: 200px;
+  background-position: center center;
+}
+.set .hot .zz a{
+  width: 100%;
+  height:100%;
+  display: block;
+}
+.set .hot .zz:nth-child(1){
+  background-image: url(../images/iphone_6s_medium.jpg);
+  border-right: 2px solid #fff;
+}
+.set .hot .zz:nth-child(2){
+  background-image: url(../images/watch_medium.jpg);
+  border-right: 2px solid #fff;
+}
+.set .hot .zz:nth-child(3){
+  background-image: url(../images/ipadpro_medium.jpg);
+  border-right: 2px solid #fff;
+}
+.set .hot .zz:nth-child(4){
+  background-image: url(../images/hp_tiles_ipad_medium.jpg);
+}
+
+
+.lianjie{
+  background: #F2F2F2;
+  padding-top: 15px;
+}
+.lianjie .neiju{
+  max-width: 1024px;
+  width: 100%;
+  margin:0 auto;
+}
+.lianjie .neiju .lianjieson p{
+  color: #000;
+  font-size: 10px;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.lianjie .neiju .lianjieson li a{
+  display: block;
+  color: #666666;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1024px){
+  .lianjie{
+    margin-top:20px;
+  }
+  .lianjie .neiju{
+    padding:0 20px;
+  }
+  .lianjie .neiju ul{
+    display: none;
+}
+  .lianjie .neiju .active{
+    display: block;
+  }
+  .lianjie .neiju .lianjieson p{
+    line-height: 30px;
+    height: 30px;
+    border-bottom: 1px solid #E3E3E3;
+    position: relative;
+    &:after{
+      content: "+";
+      position: absolute;
+      right:0;
+      font-size: 20px;
+      font-weight: 100;
+      height: 100%;
+      line-height:30px;
+      transform: rotate(0deg);
+      transition:all 0.3s;
+    }
+  }
+}
+.lianjie .neiju .lianjieson #active:after{
+  transform: rotate(45deg);
+}
